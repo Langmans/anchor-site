@@ -1,0 +1,441 @@
+/**
+ *    Anchor CMS
+ *    Site by @visualidiot, software by the wonderful open-source community.
+ */
+
+h1 a {
+    color: #333;
+    text-decoration: none;
+}
+    h1 a:hover {
+        color: #379AD3;
+    }
+
+section#content {
+    position: relative;
+}
+    aside#sidebar {
+        min-height: 1px;
+    }
+
+a.NewDiscussion, button, .Button, input[type=submit] {
+    background: #f5f5f5;
+    color: #333;
+    
+    font-weight: bold;
+    text-decoration: none;
+    
+    display: block;
+    float: left;
+    
+    padding: 8px 18px;
+
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    
+    position: absolute;
+    right: 0;
+    top: -75px;
+    
+    -webkit-transition: background .25s, color .25s;
+    -moz-transition: background .25s, color .25s;
+    -ms-transition: background .25s, color .25s;
+    -o-transition: background .25s, color .25s;
+    transition: background .25s, color .25s;
+    
+    /* Button styles */
+    font: bold 15px "Helvetica Neue", sans-serif;
+    border: none;
+    cursor: pointer;
+}
+    input[type=submit], button, .Button {
+        position: static;
+        float: right;
+        
+        margin-left: 20px;
+    }
+        .blocks .Button {
+            float: left;
+            margin: 0 20px 0 0;
+        }
+            .blocks .Button + a {
+                float: right;
+                margin-right: 0;
+            }
+    a.NewDiscussion:hover, button:hover, .Button:hover, input[type=submit]:hover {
+        background: #379ad3;
+        color: #fff;
+    }
+
+ul.PanelInfo li {
+    position: relative;
+}
+    ul.PanelInfo li span.Count {
+        position: absolute;
+        right: 20px;
+        top: 13px;
+        
+        font-size: 12px;
+    }
+    
+div.Box h4 {
+    border-bottom: 1px solid #eee;
+
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 28px;
+       
+    padding: 10px;
+}
+    div.Box h4 a {
+        color: #999;
+        text-decoration: none;
+    }
+    
+div.primary ul.Discussions {
+    list-style: none;
+    margin: -30px 0 0 -40px;
+}
+    div.primary ul.Discussions li.Item {
+        display: block;
+        position: relative;
+
+        padding: 30px 0 30px 40px;
+        
+        border-bottom: 1px solid #eee;
+    }
+    	div.primary ul.Discussions li.Item.Announcement {
+    		background: #fffdf1;
+    	}
+        div.primary ul.Discussions li.Item a.Title {
+            display: block;
+            font-size: 18px;
+        }
+        div.primary ul.Discussions li.Item div.Meta {
+            font-size: 13px;
+        }
+            div.primary ul.Discussions li.Item div.Meta span, div.primary ul.Discussions li.Item div.Meta strong {
+                padding-right: 25px;
+            }
+                div.primary ul.Discussions li.Item div.Meta strong {
+                    margin-left: -20px;
+                }
+                
+div.Comment div.Meta {
+    padding-bottom: 20px;
+}
+    
+    li.Item div.Options {
+        position: absolute;
+        right: 20px;
+        top: 30px;
+        
+        height: 30px;
+    }
+        li.Item div.Options .MenuTitle {
+            display: block;
+            width: 16px;
+            height: 16px;
+            
+            text-indent: -999em;
+            
+            background: url('../img/settings.png');
+            
+            opacity: .5;
+            
+            -webkit-transition: opacity .25s;
+            -moz-transition: opacity .25s;
+            -ms-transition: opacity .25s;
+            -o-transition: opacity .25s;
+            transition: opacity .25s;
+        }
+            li.Item div.Options:hover .MenuTitle {
+                opacity: 1;
+            }
+        li.Item div.Options .MenuItems {
+            position: absolute;
+            top: 30px;
+            right: -20px;
+            
+            list-style: none;
+
+            margin: 0;
+            padding: 10px 15px;
+
+            background: #f5f5f5;            
+            opacity: 0;
+            
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            border-radius: 4px;
+            
+            -webkit-transition: opacity .25s, min-height .25s, padding .25s;
+            -moz-transition: opacity .25s, min-height .25s, padding .25s;
+            -ms-transition: opacity .25s, min-height .25s, padding .25s;
+            -o-transition: opacity .25s, min-height .25s, padding .25s;
+            transition: opacity .25s, min-height .25s, padding .25s;
+        }
+            li.Item div.Options .MenuItems:before {
+                content: '';
+                display: block;
+                
+                position: absolute;
+                right: 23px;
+                top: -6px;
+                
+                width: 0;
+                height: 0;
+                
+                border-left: 6px solid transparent;
+                border-right: 6px solid transparent;
+                border-bottom: 6px solid #f5f5f5;
+            }
+
+            li.Item div.Options:hover .MenuItems {
+                opacity: .8;
+            }
+            
+            li.Item div.Options .MenuItems a {
+                display: block;
+                
+                color: #666;
+                font-size: 12px;
+                font-weight: bold;
+                
+                text-decoration: none;
+            }
+                li.Item div.Options .MenuItems a.DeleteDiscussion {
+                    color: #b00;
+                }
+                    li.Item div.Options .MenuItems a.DeleteDiscussion:hover {
+                        color: #500;
+                    }
+                li.Item div.Options .MenuItems a:hover {
+                    color: #333;
+                }
+    
+.Form_Comment, .CommentForm {
+    border-top: 1px solid #eee;
+    padding: 40px 0 15px 40px;
+    margin: 0 0 0 -40px;
+}
+    .CommentForm textarea {
+        margin-bottom: 20px;
+    }
+
+textarea, input[type=text], input[type=password] {
+    width: 658px;
+    padding: 10px 15px;
+    
+    font: 15px/25px "Helvetica Neue", sans-serif;
+    color: #666;
+    
+    border: 1px solid #ccc;
+    
+    -webkit-transition: background .25s, border .25s;
+    -moz-transition: background .25s, border .25s;
+    -ms-transition: background .25s, border .25s;
+    -o-transition: background .25s, border .25s;
+    transition: background .25s, border .25s;
+    
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
+}
+    input[type=text], input[type=password] {
+        padding: 6px 12px;
+        width: 400px;
+    }
+    textarea:focus, input:focus {
+        background: #f5f5f5;
+        border: 1px solid #bbb;
+        
+        outline: none;
+    }
+    
+.MainForm, #Form_User_Register {
+    padding-top: 20px;
+}
+    .MainForm input, #Form_User_Register input {
+        margin-bottom: 20px;
+    }
+    #Form_User_Register .RadioLabel input, #Form_User_Register .CheckBoxLabel input {
+        margin-bottom: 1px;
+    }
+    label.RadioLabel, label.CheckBoxLabel {
+        padding-bottom: 0 !important;
+    }
+.MainForm ul, #Form_User_Register ul {
+    list-style: none;
+    margin: 0 !important;
+}
+a.ForgotPassword {
+    padding-left: 15px;
+}
+
+#Form_SignUp {
+    margin-top: -66px;
+}
+
+li.CaptchaInput {
+    padding: 30px 0;
+}
+
+li.Buttons {
+    padding-top: 30px;
+}
+    
+label[for] {
+    font-weight: bold;
+    color: #777;
+    
+    display: block;
+    padding-bottom: 8px;
+}
+    .CheckBoxLabel label {
+        padding-right: 30px;
+    }
+    .CheckBoxLabel input {
+        margin-right: 6px;
+    }
+
+#Form_Discussion {
+    padding-top: 30px;
+}
+    #Form_Discussion input, #Form_Discussion select, #Form_Discussion textarea {
+        margin-bottom: 30px;
+    }
+    #Form_Discussion select {
+        width: 426px;
+    }
+        
+div.primary .MessageList {
+    margin: -30px 0 0 -40px;
+    list-style: none;
+}
+    .MessageList li {
+        border-bottom: 1px solid #f5f5f5;
+        
+        padding: 20px 40px;
+    }
+        .MessageList .Message li {
+            padding: 0 0 10px;
+            border: none;
+        }
+            div.primary .Message ol, div.primary .Message ul {
+                margin-bottom: 0;
+            }
+        .MessageList li:last-child {
+            border-bottom: none;
+        }
+        .MessageList .DateCreated {
+            font-size: 12px;
+            float: right;
+            
+            margin-right: -40px;
+        }
+            .MessageList .DateCreated a {
+                color: #777;
+                text-decoration: none;
+                text-transform: lowercase;
+            }
+            .MessageList .DateCreated a:hover {
+                color: #444;
+            }
+    .MessageList .Meta span {
+        padding-right: 20px;
+        font-size: 11px;
+    }
+        .MessageList .Meta span.Author {
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+div.primary ul.PostOptions {
+    list-style: none;
+    overflow: hidden;
+    
+    width: 100%;
+    margin: 0 0 20px;
+}
+    ul.PostOptions li {
+        float: left;
+        margin-right: 30px;
+    }
+    
+aside#sidebar dl {
+    position: relative;
+    padding: 10px 15px;
+}
+    aside#sidebar dt {
+        font-weight: bold;
+        color: #666;
+    }
+    aside#sidebar dd {
+        padding-bottom: 5px;
+        padding-left: 10px;
+    }
+        dd.Joined, dd.LastActive, .DateCreated {
+            text-transform: lowercase;
+        }
+        
+.Box.About h4 {
+    background: #fafafa;
+    border-top: 1px solid #e5e5e5;
+    margin-top: -1px;
+    
+    position: relative;
+}
+
+aside#sidebar p {
+    font-size: 12px;
+    line-height: 20px;
+    
+    padding: 10px 15px;
+}
+
+div.login {
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    padding: 10px 15px;
+    
+    background: #fdfdfd;
+    
+    overflow: hidden;
+}
+
+.ProfilePhotoMedium {
+	width: 25px;
+	height: auto;
+
+	margin-right: 15px;	
+	float: left;
+	
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+pre {
+    background: #fefbf4;
+    color: #7c6b46;
+    
+    padding: 10px 15px;
+    margin: 15px 0 10px;
+    
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+blockquote {
+    border-left: 2px solid #ddd;
+    background: #f5f5f5;
+    
+    padding: 10px 15px;
+}
+    
+/* Things I don't want/need */
+
+#Bookmarks, #Bookmark_List, .Tabs, .CommentInfo, #Form_SaveDraft, #Form_Preview, .Email, .IP, span.Announcement {
+    display: none;
+}
