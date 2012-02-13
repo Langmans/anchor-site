@@ -1,6 +1,6 @@
 <hgroup role="banner">
     <h1>Thanks for downloading Anchor!</h1>
-    <h2>If it didn&rsquo;t work, <a href="https://github.com/visualidiot/Anchor-CMS/zipball/master">click here.</a></h2>
+    <h2>If it didn&rsquo;t work, <a href="https://github.com/downloads/anchorcms/anchor-cms/latest.zip">click here.</a></h2>
 </hgroup>
 
 <section id="content">
