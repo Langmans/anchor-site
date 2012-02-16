@@ -1,5 +1,6 @@
 Options +MultiViews
 RewriteEngine On
+RewriteBase /
 
 RewriteRule ^version$ latest_version.txt [L]
 

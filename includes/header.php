@@ -24,10 +24,6 @@
     	
     	<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
     	
-    	<?php if($url[0] === 'download'): ?>
-    	<meta http-equiv="refresh" content="0;url=https://github.com/visualidiot/Anchor-CMS/zipball/0.5">
-    	<?php endif; ?>
-    	
     	<script type="text/javascript">
     	
     	  var _gaq = _gaq || [];
@@ -50,7 +46,9 @@
             
             <ul>
                 <?php foreach($pages as $link => $title): ?>
-                <li <?php if($link === $url[0]) echo 'class="active"'; ?>><a href="/<?php echo $link; ?>" title="<?php echo $title; ?>"><?php echo ucwords($link); ?></a></li>
+                <li <?php if($link === $url[0]) echo 'class="active"'; ?>>
+                    <a href="/<?php echo $link; ?>" title="<?php echo $title; ?>"><?php echo ucwords($link); ?></a>
+                </li>
                 <?php endforeach; ?>
             </ul>
         </nav>
