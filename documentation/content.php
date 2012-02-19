@@ -8,7 +8,7 @@
     <dt>Username:</dt>
         <dd>admin</dd>
     <dt>Password:</dt>
-        <dd>password</dd>
+        <dd><em>A unique password will be generated for you.</em></dd>
 </dl>
 
 <p><strong>In order to keep your site secure, it is vitally important you change these immediately.</strong>

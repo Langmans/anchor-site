@@ -9,7 +9,7 @@
                 
                 <div>
                     <h3>It&rsquo;s free. What are you waiting for?</h3>
-                    <p><a href="/download" title="Grab the latest version of Anchor (155kb, version 0.5a)">Download the latest version now</a> (<em>version 0.5&alpha;</em>, 155kb).</p>
+                    <p><a href="/download" title="Grab the latest version of Anchor (155kb, version 0.5a)">Download the latest version now</a></p>
                 </div>
             </aside>
             

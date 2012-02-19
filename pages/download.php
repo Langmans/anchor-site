@@ -1,6 +1,7 @@
 <hgroup role="banner">
     <h1>Thanks for downloading Anchor!</h1>
     <h2>If it didn&rsquo;t work, <a href="https://github.com/anchorcms/anchor-cms/zipball/master">click here.</a></h2>
+    <meta http-equiv="refresh" content="0; url=https://github.com/anchorcms/anchor-cms/zipball/master">
 </hgroup>
 
 <section id="content">
