@@ -15,7 +15,7 @@
             
             <nav>
                 <small>
-                    <strong>&copy; Visual Idiot <?php echo date('Y'); ?>.</strong>
+                    <strong>&copy; Anchor CMS <?php echo date('Y'); ?>.</strong>
                     Anchor is released under <a href="//sam.zoy.org/wtfpl/" title="Do What The Fuck You Want To">WTFPL</a>. Go nuts.
                 </small>
                 
@@ -25,7 +25,7 @@
                     <li><a href="/themes">Themes</a></li>
                     <li><a href="/forum">Forum</a></li>
                     <li><a href="//twitter.com/anchorcms">Twitter</a></li>
-                    <li><a href="//github.com/visualidiot/anchor-cms">Github</a></li>
+                    <li><a href="//github.com/anchorcms/anchor-cms">Github</a></li>
                     <li><a href="mailto:hi@anchorcms.com">Email</a></li>
                 </ul>
             </nav>

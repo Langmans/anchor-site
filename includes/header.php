@@ -4,7 +4,7 @@
     	<meta charset="utf-8">
     	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     
-    	<title>Anchor CMS &middot; <?php echo isset($titles[$url[0]]) ? $titles[$url[0]] : 'Make blogging beautiful'; ?></title>
+    	<title>Anchor CMS &middot; <?php echo $title; ?></title>
     	<meta name="description" content="Anchor is a lightweight content management system built for art-directed content, written in PHP5.">
     	<meta name="author" content="@visualidiot">
     
@@ -38,16 +38,18 @@
     	
     	</script>
     </head>
-    <body class="<?php echo $url[0]; ?>">
+    <body class="<?php echo $page; ?>">
         <nav id="top" role="navigation">
             <a id="logo" href="/" title="Anchor CMS logo: click to go to the homepage">
                 <img src="/assets/img/logo.png" alt="Anchor CMS logo">
             </a>
             
             <ul>
-                <?php foreach($pages as $link => $title): ?>
-                <li <?php if($link === $url[0]) echo 'class="active"'; ?>>
-                    <a href="/<?php echo $link; ?>" title="<?php echo $title; ?>"><?php echo ucwords($link); ?></a>
+                <?php foreach($menu as $link): ?>
+                <li<?php if(strpos($page, $link) !== false) echo ' class="active"'; ?>>
+                    <a href="/<?php echo $link; ?>">
+                        <?php echo ucwords($link); ?>
+                    </a>
                 </li>
                 <?php endforeach; ?>
             </ul>
