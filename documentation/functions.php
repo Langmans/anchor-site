@@ -127,6 +127,12 @@ $text = 'Returns a string which contains the current status of the article. Can 
 Docs::add('article_status', $text);
 
 /*
+	article_total_comments
+*/
+$text = 'Returns the total number of published comments for the current article.';
+Docs::add('article_total_comments', $text);
+
+/*
 	article_author
 */
 $text = 'Returns the name of the post author as a string.';
