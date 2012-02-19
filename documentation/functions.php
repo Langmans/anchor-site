@@ -460,6 +460,12 @@ $text = 'Returns the current page\'s ID.';
 Docs::add('page_id', $text);
 
 /*
+	page_slug
+*/
+$text = 'Returns the slug of the current page.';
+Docs::add('page_slug', $text);
+
+/*
 	page_url
 */
 $text = 'Returns the current page\'s relative URL.';
