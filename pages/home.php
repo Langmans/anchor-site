@@ -14,7 +14,7 @@
         <li>
             <img src="/assets/img/open-source.gif" alt="Anchor&rsquo;s source code is completely available for anyone.">
             <h1>Open&ndash;source.</h1>
-            <p>Since the beginning, Anchor has been written and maintained by an amazing <a href="//github.com/visualidiot/anchor-cms">community</a> of web designers and developers, all working to produce a great product, for free.</p>
+            <p>Since the beginning, Anchor has been written and maintained by an amazing <a href="//github.com/anchorcms/anchor-cms">community</a> of web designers and developers, all working to produce a great product, for free.</p>
         </li>
 
         <li>

@@ -43,7 +43,7 @@
         
         <li class="help">
             <h2>Help at hand</h2>
-            <p>Found a bug in Anchor? We&rsquo;re actively looking at the <a href="https://github.com/visualidiot/Anchor-CMS/issues">Github issues log</a> (which anyone can submit to). Got a problem with your personal copy of Anchor? We&rsquo;re <a href="http://twitter.com/anchorcms">on Twitter</a>, ready to help.</p>
+            <p>Found a bug in Anchor? We&rsquo;re actively looking at the <a href="//github.com/anchorcms/anchor-cms">Github issues log</a> (which anyone can submit to). Got a problem with your personal copy of Anchor? We&rsquo;re <a href="http://twitter.com/anchorcms">on Twitter</a>, ready to help.</p>
         </li>
         
         <li class="finally">
