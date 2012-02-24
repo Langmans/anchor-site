@@ -1,0 +1,5 @@
+Theme name:    Diamante
+Description:   Mixing grunge with readability, this theme is perfect for the lightweight blogger with a cause.
+Author name:   Visual Idiot
+Author site:   http://visualidiot.com
+License:       WTFPL (http://sam.zoy.org/wtfpl/COPYING)

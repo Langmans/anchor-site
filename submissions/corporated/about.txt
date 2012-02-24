@@ -1,0 +1,5 @@
+Theme name:    Corporated
+Description:   Add an extra layer of shine to your themes. Give off the perfect professional feel.
+Author name:   Visual Idiot
+Author site:   http://visualidiot.com
+License:       WTFPL (http://sam.zoy.org/wtfpl/COPYING)

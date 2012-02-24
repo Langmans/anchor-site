@@ -1,0 +1,5 @@
+Theme name:    Noteworthy
+Description:   Picture-heavy, type-heavy, emotion-heavy: this theme is perfect for the budding designer/photographer.
+Author name:   Visual Idiot
+Author site:   http://visualidiot.com
+License:       WTFPL (http://sam.zoy.org/wtfpl/COPYING)
