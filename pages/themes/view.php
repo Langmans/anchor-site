@@ -40,7 +40,7 @@ file_put_contents($url, $count);
 		        <dd><a href="/themes/author/<?php echo url_title($theme['author']); ?>"><?php echo $theme['author']; ?></a></dd>
 		        
 		    <dt>Views</dt>
-		        <dd><?php echo $count; ?></dd>
+		        <dd><?php echo number_format($count); ?></dd>
 		</dl>
 	</aside>
 

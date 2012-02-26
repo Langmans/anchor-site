@@ -473,7 +473,7 @@ aside#sidebar {
             
             border-bottom: 1px solid #f2f2f2;
         }
-    aside#sidebar ul li a, aside#sidebar ul li strong {
+    aside#sidebar ul li a, .themes_view aside#sidebar ul li strong {
         display: block;
         padding: 10px;
         
@@ -484,7 +484,7 @@ aside#sidebar {
         
         border-bottom: 1px solid #f2f2f2;
     }
-        aside#sidebar ul li strong {
+        .themes_view aside#sidebar ul li strong {
             color: #bbb;
         }
         aside#sidebar ul li a:hover, aside#sidebar li.active > a {
@@ -667,10 +667,10 @@ figure.image {
         box-shadow: 0 1px 2px rgba(0,0,0,.05);
     }
     
-aside#sidebar dl {
+.theme_view aside#sidebar dl {
     font-size: 13px;
 }
-    aside#sidebar dt {
+    .theme_view aside#sidebar dt {
         font-weight: bold;
         padding: 10px 10px 0;
         width: 80px;
@@ -678,7 +678,7 @@ aside#sidebar dl {
         
         position: absolute;
     }
-    aside#sidebar dd {
+    .theme_view aside#sidebar dd {
         padding: 10px 10px 10px 90px;
         border-bottom: 1px solid #eee;
         

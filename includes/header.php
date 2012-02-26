@@ -38,7 +38,7 @@
     	
     	</script>
     </head>
-    <body class="<?php echo $page; ?>">
+    <body class="<?php echo str_replace('/', '_', $page); ?>">
         <nav id="top" role="navigation">
             <a id="logo" href="/" title="Anchor CMS logo: click to go to the homepage">
                 <img src="/assets/img/logo.png" alt="Anchor CMS logo">
