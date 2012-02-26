@@ -19,9 +19,17 @@ file_put_contents($url, $count);
 
 <section>
 
+    <figure class="image">
+        <img src="/submissions/<?php echo $key; ?>/preview.png">
+    </figure>
+
 	<aside id="sidebar">
 		<ul>
-			<li><a href="/submissions/<?php echo $key; ?>/<?php echo $key; ?>.zip">Download</a></li>
+		    <?php if(file_exists(PATH . 'submissions/' . $key . $key . '.zip')): ?>
+			<li><a class="download" href="/submissions/<?php echo $key; ?>/<?php echo $key; ?>.zip">Download</a></li>
+			<?php else: ?>
+			<li><strong class="soon">Download coming soon!</strong></li>
+			<?php endif; ?>
 		</ul>
 		
 		<dl>
@@ -37,10 +45,6 @@ file_put_contents($url, $count);
 	</aside>
 
 	<div class="primary submission">
-		<figure class="prev">
-		    <img src="/submissions/<?php echo $key; ?>/preview.png">
-		</figure>
-
 		<h2><?php echo $theme['name']; ?></h2>
 
 		<p><?php echo $theme['description']; ?></p>

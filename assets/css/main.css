@@ -473,7 +473,7 @@ aside#sidebar {
             
             border-bottom: 1px solid #f2f2f2;
         }
-    aside#sidebar ul li a {
+    aside#sidebar ul li a, aside#sidebar ul li strong {
         display: block;
         padding: 10px;
         
@@ -484,6 +484,9 @@ aside#sidebar {
         
         border-bottom: 1px solid #f2f2f2;
     }
+        aside#sidebar ul li strong {
+            color: #bbb;
+        }
         aside#sidebar ul li a:hover, aside#sidebar li.active > a {
             color: #379ad3;
         }
@@ -637,6 +640,50 @@ ul.submissions {
         
         font-size: 13px;
         text-align: right;
+    }
+    
+figure.image {
+    position: relative;
+    top: -6px;
+    margin-bottom: -6px;
+}
+    figure.image:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        
+        display: block;
+        width: 100%;
+        height: 3px;
+        
+        background: rgba(0,0,0,.05);
+        border-top: 1px solid rgba(0,0,0,.1);
+    }
+    figure.image img {
+        width: 100%;
+        height: auto;
+        
+        box-shadow: 0 1px 2px rgba(0,0,0,.05);
+    }
+    
+aside#sidebar dl {
+    font-size: 13px;
+}
+    aside#sidebar dt {
+        font-weight: bold;
+        padding: 10px 10px 0;
+        width: 80px;
+        color: #888;
+        
+        position: absolute;
+    }
+    aside#sidebar dd {
+        padding: 10px 10px 10px 90px;
+        border-bottom: 1px solid #eee;
+        
+        position: relative;
+        color: #aaa;
     }
 
 /* @end */
