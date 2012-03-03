@@ -1,10 +1,11 @@
 <?php
 
-class Home_Controller extends Base_Controller {
+class Home_controller {
 
-	public function action_index()
-	{
-		return View::make('home.index');
+	public function index() {
+		$data['title'] = 'Home';
+		View::make('home', $data);
 	}
 
 }
+

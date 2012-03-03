@@ -1,10 +1,10 @@
 <?php
 
-class Features_Controller extends Base_Controller {
+class Features_controller {
 
-	public function action_index()
-	{
-		return View::make('features.index');
+	public function index() {
+		$data['title'] = 'Features';
+		View::make('features', $data);
 	}
 
 }
