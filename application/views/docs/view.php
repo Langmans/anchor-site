@@ -17,11 +17,10 @@
 		<pre><code><?php echo $page->example; ?></code></pre>
 		<?php endif; ?>
 
-		<p><em>[<?php echo Html::anchor('edit/' . $page->id, 'Edit this page'); ?>]</em></p>
+		<p><em>[<?php echo Html::anchor('admin/docs/edit/' . $page->id, 'Edit this page'); ?>]</em></p>
 	</div>
 </section>
 
-<script src="/assets/highlight/highlight.pack.js"></script>
-<script>hljs.initHighlightingOnLoad();</script>
+<script src="/assets/js/highlight.js"></script>
 
 <?php View::make('layout/footer'); ?>

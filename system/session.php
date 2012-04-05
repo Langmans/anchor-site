@@ -43,14 +43,16 @@ class Session {
 		}
 
 		if(is_null(static::$session) or static::$session === false) {
-			static::$session = array('id' => Str::random(40), 'last_activity' => date("c"), 'data' => array());
+			static::$session = array('id' => Str::random(32), 'last_activity' => date("c"), 'data' => array());
 		}
 	}
 
 	public static function write() {
 		static::$session['last_activity'] = date("c");
 		static::driver()->write(static::$session);
-		Cookie::write('session', static::$session['id'], time() + Config::get('session.expire'), Config::get('session.path'), Config::get('session.domain'));
+
+		$expire = time() + Config::get('session.expire', 7200);
+		Cookie::write('session', static::$session['id'], $expire, Config::get('session.path'), Config::get('session.domain'));
 	}
 
 	public static function get($key = null, $default = false) {

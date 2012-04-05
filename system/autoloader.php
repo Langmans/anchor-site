@@ -53,9 +53,18 @@ class Autoloader {
 	}
 	
 	public static function find($file) {
+		// search controllers
+		if(preg_match('/_controller$/i', $file)) {
+			$controller = APP_PATH . 'controllers/' . trim(strtolower($file), '_controller') . EXT;
+
+			if(is_readable($controller)) {
+				return $controller;
+			}
+		}
+
 		// search system and application paths
-		foreach(array(BASE_PATH, SYS_PATH, APP_PATH . 'library/', APP_PATH . 'models/', APP_PATH . 'controllers/') as $path) {
-			if(stream_resolve_include_path($path . $file . EXT)) {
+		foreach(array(BASE_PATH, SYS_PATH, APP_PATH . 'library/', APP_PATH . 'models/') as $path) {
+			if(is_readable($path . $file . EXT)) {
 				return $path . $file . EXT;
 			}
 		}

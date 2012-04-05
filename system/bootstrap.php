@@ -142,5 +142,3 @@ if(Config::get('session.driver')) {
 
 // Output to browser
 Response::send();
-
-/* End of file */

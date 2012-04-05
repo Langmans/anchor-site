@@ -2,25 +2,24 @@
 
 <hgroup role="banner">
 	<h1>Marketplace</h1>
-	<a href="/themes/submit">Submit your theme</a>
 </hgroup>
 
 <section id="content">
 	
 	<aside id="sidebar">
 		<ul>
-			<li><a href="#">Help</a></li>
+			<li><?php echo Html::anchor('themes/help', 'Help'); ?></li>
 		</ul>
 	</aside>
 
 	<div class="primary">
 
-		<?php echo Html::form_open('themes/submit'); ?>
+		<?php echo Html::form_open_multipart('themes/submit'); ?>
 
 			<fieldset>
 				<legend>Theme details</legend>
 
-				
+				<?php echo Notifications::read(); ?>
 
 				<p><label>Theme<br>
 				<?php echo Html::form_upload(array('name' => 'theme')); ?></label><br>

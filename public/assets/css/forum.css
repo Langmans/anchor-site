@@ -18,7 +18,7 @@ section#content {
         min-height: 1px;
     }
 
-a.NewDiscussion, button, .Button, input[type=submit] {
+a.NewDiscussion, button, .Button, input[type=submit], .download {
     background: #f5f5f5;
     color: #333;
     
@@ -49,12 +49,19 @@ a.NewDiscussion, button, .Button, input[type=submit] {
     border: none;
     cursor: pointer;
 }
-    input[type=submit], button, .Button {
+    input[type=submit], button, .Button, .download {
         position: static;
         float: right;
         
         margin-left: 20px;
     }
+        .download {
+            float: none;
+            width: auto;
+            
+            display: inline-block;
+            margin: 0;
+        }
         .blocks .Button {
             float: left;
             margin: 0 20px 0 0;
@@ -63,7 +70,7 @@ a.NewDiscussion, button, .Button, input[type=submit] {
                 float: right;
                 margin-right: 0;
             }
-    a.NewDiscussion:hover, button:hover, .Button:hover, input[type=submit]:hover {
+    a.NewDiscussion:hover, button:hover, .Button:hover, input[type=submit]:hover, .download:hover {
         background: #379ad3;
         color: #fff;
     }
@@ -433,9 +440,87 @@ blockquote {
     
     padding: 10px 15px;
 }
+
+/* Pagination */
+
+.P {
+    min-height: 20px;
+    padding-bottom: 20px;
+}
+    .P a {
+        float: left;
+        padding: 0 20px;
+
+        line-height: 20px;
+    }
+    .P a.Highlight {
+        color: #333;
+        font-weight: bold;
+    }
+.P .Previous, .P .Next {
+    display: block;
+    float: left;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    margin: 0;
+
+    background: #eee;
+    color: #555;
     
+    font-size: 17px;
+    line-height: 20px;
+    text-align: center;
+    text-decoration: none;
+
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    
+    -webkit-transition: background .25s, color .25s;
+}
+    .P a.Previous:hover, .P a.Next:hover {
+        color: #fff;
+        background: #555;
+    }
+    .P .Previous {
+        margin-right: 20px;
+    }
+    .P span.Previous, .P span.Next {
+        opacity: .5;
+    }
+    .P .Next {
+        float: right;
+    }
+    
+/* Category listing page */
+
+div.primary ul.CategoryList {
+    list-style: none;
+    margin: -30px 0 0 -40px;
+}
+    div.primary ul.CategoryList li {
+        border-bottom: 1px solid #eee;
+        padding: 30px 40px;
+    }
+    
+    div.primary ul.CategoryList .Meta {
+        color: #aaa;
+        font-size: 13px;    
+    }
+    div.primary ul.CategoryList .Meta span {
+        padding-right: 20px;    
+    }
+    
+    div.primary ul.CategoryList .Title {
+        font-weight: bold;
+        font-size: 18px;
+        
+        display: block;   
+    }
+        
 /* Things I don't want/need */
 
-#Bookmarks, #Bookmark_List, .Tabs, .CommentInfo, #Form_SaveDraft, #Form_Preview, .Email, .IP, span.Announcement {
+#Bookmarks, #Bookmark_List, .Tabs, .CommentInfo, #Form_SaveDraft, #Form_Preview, .Email, .IP, span.Announcement, .RSS, .Activity, .Activities {
     display: none;
 }

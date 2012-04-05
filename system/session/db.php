@@ -12,18 +12,20 @@
 
 use System\Config;
 use System\Crypt;
+use System\Db\Query;
 
 class Db implements Driver {
 
 	public function read($id) {
-		$query = \System\Db\Query::make()
+		$session = Query::make()
 			->select('*')
 			->from(Config::get('session.table'))
 			->where('id', $id)
-			->limit(1);
+			->limit(1)
+			->row(\PDO::FETCH_ASSOC);
 
-		if($session = \System\Db::row($query->sql(), $query->bindings(), \PDO::FETCH_ASSOC)) {
-			$session['data'] = unserialize(Crypt::decrypt($session['data']));
+		if($session) {
+			$session['data'] = unserialize($session['data']); //unserialize(Crypt::decrypt($session['data']));
 			return $session;
 		}
 		
@@ -32,16 +34,16 @@ class Db implements Driver {
 
 	public function write($session) {
 		// out with the old
-		\System\Db\Query::make()
+		Query::make()
 			->delete(Config::get('session.table'))
 			->where('id', $session['id'])
 			->go();
 		
 		// encrypt data
-		$session['data'] = Crypt::encrypt(serialize($session['data']));
+		$session['data'] = serialize($session['data']); //Crypt::encrypt(serialize($session['data']));
 		
 		// in with the new
-		return \System\Db\Query::make()
+		return Query::make()
 			->insert(Config::get('session.table'), $session)
 			->go();
 	}

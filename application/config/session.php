@@ -11,9 +11,9 @@
  */
 
 return array(
-	'driver' => '',
+	'driver' => 'db',
 	'table' => 'sessions',
-	'expire' => 7200,
+	'expire' => 86400,
 	'domain' => '',
 	'path' => '/'
 );

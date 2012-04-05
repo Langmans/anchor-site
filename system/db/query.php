@@ -192,12 +192,12 @@ class Query {
 		return Db::query($this->sql(), $this->bindings())->fetchColumn();
 	}
 	
-	public function row() {
-		return Db::row($this->sql(), $this->bindings());
+	public function row($fetch_style = \PDO::FETCH_OBJ) {
+		return Db::row($this->sql(), $this->bindings(), $fetch_style);
 	}
 	
-	public function results() {
-		return Db::results($this->sql(), $this->bindings());
+	public function results($fetch_style = \PDO::FETCH_OBJ) {
+		return Db::results($this->sql(), $this->bindings(), $fetch_style);
 	}
 
 }

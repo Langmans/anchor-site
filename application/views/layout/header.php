@@ -23,7 +23,7 @@
 		<link rel="stylesheet" media="only screen and (max-width: 501px)" href="/assets/css/resolutions/500.css">
 		
 		<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
-		
+<?php /*
 		<script type="text/javascript">
 		
 		  var _gaq = _gaq || [];
@@ -37,6 +37,7 @@
 		  })();
 		
 		</script>
+*/ ?>
 	</head>
 	<body>
 		<nav id="top" role="navigation">
@@ -46,10 +47,9 @@
 			
 			<ul>
 				<?php foreach(array('features', 'themes', 'docs', 'forum', 'download') as $link): ?>
-				<li>
-					<a href="/<?php echo $link; ?>">
-						<?php echo ucwords($link); ?>
-					</a>
+				<?php $active = preg_match('/^\/' . $link . '/', Url::current()) ? ' class="active"' : ''; ?>
+				<li<?php echo $active; ?>>
+					<?php echo Html::anchor($link, ucwords($link)); ?>
 				</li>
 				<?php endforeach; ?>
 			</ul>

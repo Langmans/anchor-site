@@ -36,7 +36,6 @@ return array(
 		'controller' => 'home',
 		'method' => 'index'
 	),
-	'docs/(.+)' => 'docs/view/$1',
-	'edit/(:num)' => 'docs/edit/$1'
+	'^docs/(.+)' => 'docs/view/$1'
 );
 

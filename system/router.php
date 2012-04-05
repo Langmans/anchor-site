@@ -78,10 +78,11 @@ class Router {
 
 	private function set_uri_segments() {
 		// create segments from uri
-		$this->uri_segments = explode(DIRECTORY_SEPARATOR, $this->uri_string());
+		$segments = explode(DIRECTORY_SEPARATOR, $this->uri_string());
+		$this->uri_segments = $segments;
 		
 		// no segments nothing else to do
-		if(empty($this->uri_segments)) {
+		if(empty($segments)) {
 			return;
 		}
 		
@@ -96,24 +97,23 @@ class Router {
 
 		// check a controller can be found in sub-folder
 		if($this->directory) {
-			$found = false;
-		
-			if(isset($this->uri_segments[0])) {
-				// Does the requested controller exist in the sub-folder
-				if(file_exists($path . $this->directory . $this->uri_segments[0] . EXT)) {
-					$found = true;
-				}
-			}
-		
-			// Does the default controller exist in the sub-folder
-			if(file_exists($path . $this->directory . $this->default_controller . EXT)) {
-				$found = true;
-			}
-		
-			// revert to defaults
-			if($found === false) {
+			if(
+				(
+					// Does the the default controller exist in the sub-folder
+					file_exists($path . $this->directory . $this->default_controller . EXT) === false
+				) and (
+					// Does the requested controller exist in the sub-folder
+					(
+						empty($this->uri_segments)
+					) or (
+						isset($this->uri_segments[0]) and
+						file_exists($path . $this->directory . $this->uri_segments[0] . EXT) === false
+					)
+				)
+			) {
+				// reset
 				$this->directory = '';
-				$this->uri_segments = array();
+				$this->uri_segments = $segments;
 			}
 		}
 	}
@@ -156,5 +156,3 @@ class Router {
 	}
 
 }
-
-/* End of file */
